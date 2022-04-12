@@ -177,15 +177,13 @@ public class Main {
     int age = sc.nextInt();
     sc.nextLine();
 
-    String role = "";
+    String role = "simple";
     if (selectedUser != null && selectedUser.getRole().equalsIgnoreCase("admin")) {
       System.out.println("Ar suteikti vartotojui administratoriaus teises? [T/N]");
       String setAdminRights = sc.nextLine();
       if (setAdminRights.equalsIgnoreCase("t")) {
         role = "admin";
       }
-    } else {
-      role = "simple";
     }
     users.add(new User(username, password, name, surname, age, role));
 
